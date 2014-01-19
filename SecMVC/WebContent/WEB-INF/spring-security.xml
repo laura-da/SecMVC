@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
 	<http auto-config="true">
-		<intercept-url pattern="/welcome*" access="ROLE_USER" />
+		<intercept-url pattern="/welcome*" access="ROLE_USER, ROLE_ADMIN, ROLE_SPITTER" />
 		
 		<form-login login-page="/login"
 			default-target-url="/welcome"
@@ -16,14 +16,16 @@
 	</http>
 
 	<authentication-manager>
-		<authentication-provider>
-	<!-- <password-encoder hash="sha" />  -->	
+	 <authentication-provider user-service-ref="userService" />
+	<!--	<authentication-provider >
+	// <password-encoder hash="sha" />  	
 			<user-service>
 				<user name="user" password="user" authorities="ROLE_USER" />
-			</user-service>
-		</authentication-provider>
+			</user-service>	
+		</authentication-provider>  -->
+		 <authentication-provider user-service-ref="userService" />
 	</authentication-manager>
 	
-	
-
+	 <beans:import resource="spitter-security-inmemory.xml"/>
+	 
 </beans:beans>

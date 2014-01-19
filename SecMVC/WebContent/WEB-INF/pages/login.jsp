@@ -14,7 +14,7 @@
 </style>
 </head>
 <body onload='document.f.j_username.focus();'>
-	<h3>Login with Username and Password (Custom Page)</h3>
+	<h3>Please login with Username and Password! </h3>
  
 	<c:if test="${not empty error}">
 		<div class="errorblock">
@@ -38,14 +38,16 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan='2'><input name="submit" type="submit"
+				<td colspan='2'><input name="Sign in" type="submit"
 					value="submit" />
 				</td>
 			</tr>
+			
 			<tr>
-				<td colspan='2'><input name="reset" type="reset" />
+				<td colspan='2'><a href="/pages/needhelp.jsp">Need help?</a>
 				</td>
 			</tr>
+			
 		</table>
  
 	</form>

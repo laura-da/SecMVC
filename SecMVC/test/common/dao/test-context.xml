@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"> 
+        
+     <bean id="SpitDAO" class="common.repository.SpitDAO">
+        <property name="spitters">  
+        	<list>	
+        	</list>
+        </property>
+        
+        <property name = "spittles" >
+        	<list></list>
+        </property>
+    </bean>
+    
+    
+ <!--    <bean id="SpitterAlex" class="common.domain.Spitter">
+    
+    </bean>
+    
+     <bean id="productManager" class="vilvui.vera.service.SimpleProductManager">
+        <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="product1" class="vilvui.vera.domain.Product">
+        <property name="description" value="Lamp"/>
+        <property name="price" value="5.75"/>
+    </bean>
+        -->
+</beans>
